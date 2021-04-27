@@ -1,0 +1,6 @@
+[1110/195709.984:ERROR:directory_reader_win.cc(43)] FindFirstFile: —истеме не удаетс€ найти указанный путь. (0x3)
+[1112/155332.532:ERROR:directory_reader_win.cc(43)] FindFirstFile: —истеме не удаетс€ найти указанный путь. (0x3)
+[1113/171227.832:ERROR:directory_reader_win.cc(43)] FindFirstFile: —истеме не удаетс€ найти указанный путь. (0x3)
+[1220/174822.367:ERROR:directory_reader_win.cc(43)] FindFirstFile: —истеме не удаетс€ найти указанный путь. (0x3)
+[1230/095855.201:ERROR:directory_reader_win.cc(43)] FindFirstFile: —истеме не удаетс€ найти указанный путь. (0x3)
+[1231/191950.053:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: «аданна€ длина записи со сведени€ми не соответствует длине, требуемой дл€ указанного класса сведений. (0xc0000004)

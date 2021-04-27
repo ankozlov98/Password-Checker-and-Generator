@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Антон\Documents\Web Development\Password Check Generate\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <script src="generate.js" defer></script>
+    
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-container-title">PASSWORD: CHECK AND GENERATE</div>
+        <div class="tab"  id="check">
+            <div class="main-container-check-row">
+                <input type="text" class="check-row--input" id="check-row--input">
+                <div class="check-row--buttons">
+                    <button class="check-row--button-check" id="hide-button">CHECK</button>
+                    <button class="check-row--button-hide" id="check-button">HIDE</button>
+                </div>
+            </div>
+            <div class="main-container--results">
+                <div class="lock--image" id="lock--image"><img
+                        src="C:\Users\Антон\Documents\Web Development\Password Check Generate\lock-icon-11.png"></div>
+                <div class="results--lock">
+                    <div class="results--percentage" id="results--percentage"></div>
+                    <div class="results--commentary" id="results--commentary"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab" id="generate">
+            <div id="passwordDisplay">result</div>
+            <div id="options">
+
+                <div class="character-amount">
+                    <label class="character-amount-name" for="amountNumbers">Number of characters</label>
+                    <input type="range" min="0" max="25" value="4" class="amount-range" id="amountRange">
+                    <input type="number" min="0" max="25" value="4" class="amount-Numbers" id="amountNumbers">
+                </div>
+                <div class="distinct">
+                    <div class="features">
+                        <div class="check-n-label">
+                            <label for="includesLowerCase">
+                            <input type="checkbox" class="check" id="includesLowerCase">
+                            Includes lowercase letters</label>
+                        </div>
+                        <div class="check-n-label">
+                            <label for="includesUpperCase">
+                            <input type="checkbox" class="check"  id="includesUpperCase">
+                            Includes uppercase letters</label>
+                        </div>
+                        <div class="check-n-label">
+                            <label for="includesNumbers">
+                            <input type="checkbox" class="check"  id="includesNumbers">
+                            Includes numbers</label>
+                        </div>
+                        <div class="check-n-label">
+                            <label for="includesSymbols">
+                            <input type="checkbox" class="check" id="includesSymbols">
+                            Includes special syumbols</label>
+                        </div>
+                    </div>
+                    <div class="ready">
+                        <div class="check-n-label">
+                            <button class="button" id="easy">Easy</button>
+                        </div>
+                        <div class="check-n-label">
+                            <button class="button" id="normal">Normal</button>
+                        </div>
+                        <div class="check-n-label">
+                            <button class="check" id="difficult">Difficult</button>
+                        </div>
+                        <div class="check-n-label">
+                            <button id="generate-button">Generate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <button class="tab-button" id="tab1" onclick="openTab(event, 'check')">CHECK</button>
+            <button class="tab-button" id="tab2" onclick="openTab(event, 'generate')">GENERATE</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script>
+        document.getElementById("tab1").click();
+        function openTab(evt, passwordFeat) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(passwordFeat).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+
+</html>
